@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataExamination", "ODataEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataLibrary", "ODataLibrary\ODataLibrary.csproj", "{1DB120F9-AF32-40B0-905B-4851642A4707}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary", "CommonLibrary\CommonLibrary.csproj", "{3B25B640-EB60-4955-858F-4FF0C4D47177}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OData.UnitTest", "OData.UnitTest\OData.UnitTest.csproj", "{D196CB91-9F94-4902-8692-BB61766EE725}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1DB120F9-AF32-40B0-905B-4851642A4707}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DB120F9-AF32-40B0-905B-4851642A4707}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DB120F9-AF32-40B0-905B-4851642A4707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B25B640-EB60-4955-858F-4FF0C4D47177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B25B640-EB60-4955-858F-4FF0C4D47177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B25B640-EB60-4955-858F-4FF0C4D47177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B25B640-EB60-4955-858F-4FF0C4D47177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D196CB91-9F94-4902-8692-BB61766EE725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D196CB91-9F94-4902-8692-BB61766EE725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D196CB91-9F94-4902-8692-BB61766EE725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D196CB91-9F94-4902-8692-BB61766EE725}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
