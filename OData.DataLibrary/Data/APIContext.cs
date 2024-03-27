@@ -11,13 +11,18 @@ public class APIContext
     }
     public async Task<IEnumerable<Person>> People() 
     {
-        IEnumerable<Person> people = await _context.People.ExecuteAsync();
-        return people;
+        return await People(null);
     }
 
-    public async Task<IEnumerable<Person>> FilteredPeople()
+    public async Task<IEnumerable<Person>> People(string? filter)
     {
-        IEnumerable<Person> people = await _context.People.ExecuteAsync();
-        return people;
+        if (filter is not { }) 
+        {
+            return await _context.People.ExecuteAsync();
+        }
+        return (await _context.People.ExecuteAsync()).Where(p => 
+        p.UserName == filter 
+        || p.FirstName == filter
+        || p.LastName == filter);
     }
 }

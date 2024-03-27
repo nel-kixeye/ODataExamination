@@ -1,5 +1,5 @@
-﻿using ODataLibrary.Services;
-using Trippin;
+﻿using ODataLibrary.DTO;
+using ODataLibrary.Services;
 
 namespace ODataLibrary.Commands;
 public abstract class Commands
@@ -10,5 +10,5 @@ public abstract class Commands
         _peopleService = peopleService;
     }
     public abstract string CommandName { get; }
-    public abstract Task<IEnumerable<Person>> Execute();
+    public abstract Task<IEnumerable<PersonNameDTO>?> Execute();
 }

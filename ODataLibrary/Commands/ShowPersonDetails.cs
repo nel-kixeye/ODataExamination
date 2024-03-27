@@ -1,5 +1,5 @@
-﻿using ODataLibrary.Services;
-using Trippin;
+﻿using ODataLibrary.DTO;
+using ODataLibrary.Services;
 
 namespace ODataLibrary.Commands;
 public class ShowPersonDetails : Commands
@@ -10,7 +10,7 @@ public class ShowPersonDetails : Commands
 
     public override string CommandName => "ShowPersonDetails";
 
-    public override async Task<IEnumerable<Person>> Execute()
+    public override async Task<IEnumerable<PersonNameDTO>?> Execute()
     {
         throw new NotImplementedException();
     }

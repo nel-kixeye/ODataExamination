@@ -1,17 +1,19 @@
-﻿using ODataLibrary.Services;
-using Trippin;
+﻿using ODataLibrary.DTO;
+using ODataLibrary.Services;
 
 namespace ODataLibrary.Commands;
 public class FilterPeopleCommand : Commands
 {
-    public FilterPeopleCommand(PeopleService peopleService) : base(peopleService)
+    private readonly string filter;
+    public FilterPeopleCommand(PeopleService peopleService, string filter) : base(peopleService)
     {
+        this.filter = filter;
     }
 
     public override string CommandName => "FilterPeople";
 
-    public override async Task<IEnumerable<Person>> Execute()
+    public override async Task<IEnumerable<PersonNameDTO>?> Execute()
     {
-        throw new NotImplementedException();
+        return await _peopleService.PeopleFilteredList(filter);
     }
 }
