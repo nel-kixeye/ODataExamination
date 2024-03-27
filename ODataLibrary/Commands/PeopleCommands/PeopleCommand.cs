@@ -1,11 +1,11 @@
 ﻿using ODataLibrary.DTO;
 using ODataLibrary.Services;
 
-namespace ODataLibrary.Commands;
-public abstract class Commands
+namespace ODataLibrary.Commands.PeopleCommands;
+public abstract class PeopleCommand
 {
     protected readonly PeopleService _peopleService;
-    public Commands(PeopleService peopleService)
+    public PeopleCommand(PeopleService peopleService)
     {
         _peopleService = peopleService;
     }

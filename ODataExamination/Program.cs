@@ -1,11 +1,13 @@
-﻿using ODataLibrary.Commands;
-using ODataLibrary.Services;
+﻿using ODataLibrary.Services;
 using OData.DataLibrary.Data;
+using ODataLibrary.Commands.PeopleCommands;
+using ODataLibrary.Commands.PersonCommand;
 
 //set up dependencies
 var apiContext = new APIContext();
 var peopleService = new PeopleService(apiContext);
-var commandManager = new CommandManager();
+var peopleCommandManager = new PeopleCommandManager();
+var personCommandManager = new PersonCommandManager();
 
 Console.WriteLine();
 Console.WriteLine("All People");
@@ -13,14 +15,14 @@ Console.WriteLine();
 
 //execute listing people command
 var listPeopleCommand = new ListPeopleCommand(peopleService);
-commandManager.AddCommand(listPeopleCommand);
-await commandManager.ExecuteCommandAsync("ListPeople");
-var people = commandManager.CurrentResult;
+peopleCommandManager.AddCommand(listPeopleCommand);
+await peopleCommandManager.ExecuteCommandAsync("ListPeople");
+var people = peopleCommandManager.CurrentResult;
 if (people is { }) 
 {
-    foreach (var person in people)
+    foreach (var pFerson in people)
     {
-        Console.WriteLine(person.UserName);
+        Console.WriteLine(pFerson.UserName);
     }
 }
 
@@ -30,13 +32,27 @@ Console.WriteLine();
 
 //execute filtering people command
 var filterPeopleCommand = new FilterPeopleCommand(peopleService, "russellwhyte");
-commandManager.AddCommand(filterPeopleCommand);
-await commandManager.ExecuteCommandAsync("FilterPeople");
-var filteredPeople = commandManager.CurrentResult;
+peopleCommandManager.AddCommand(filterPeopleCommand);
+await peopleCommandManager.ExecuteCommandAsync("FilterPeople");
+var filteredPeople = peopleCommandManager.CurrentResult;
 if (filteredPeople is { })
 {
-    foreach (var person in filteredPeople)
+    foreach (var fPerson in filteredPeople)
     {
-        Console.WriteLine(person.UserName);
+        Console.WriteLine(fPerson.UserName);
     }
+}
+
+Console.WriteLine();
+Console.WriteLine("Show People");
+Console.WriteLine();
+
+//execute filtering people command
+var showPersonDetails = new ShowPersonDetails(peopleService, "russellwhyte");
+personCommandManager.AddCommand(showPersonDetails);
+await personCommandManager.ExecuteCommandAsync("ShowPersonDetails");
+var person = personCommandManager.CurrentResult;
+if (person is { })
+{
+    Console.WriteLine(person.LastName + ", " + person.FirstName);
 }

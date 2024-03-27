@@ -1,18 +1,18 @@
 ﻿using ODataLibrary.DTO;
 
-namespace ODataLibrary.Commands;
-public class CommandManager
+namespace ODataLibrary.Commands.PeopleCommands;
+public class PeopleCommandManager
 {
-    private IEnumerable<PersonNameDTO>? _people;   
+    private IEnumerable<PersonNameDTO>? _people;
 
-    private List<Commands> CommandCollection = new  List<Commands>();
+    private List<PeopleCommand> CommandCollection = new List<PeopleCommand>();
     public IEnumerable<PersonNameDTO>? CurrentResult { get { return _people; } }
-    public void AddCommand(Commands command) 
+    public void AddCommand(PeopleCommand command)
     {
         CommandCollection.Add(command);
     }
 
-    public async Task ExecuteCommandAsync(string commandName) 
+    public async Task ExecuteCommandAsync(string commandName)
     {
         if (CommandCollection.Any(cc => cc.CommandName == commandName))
         {

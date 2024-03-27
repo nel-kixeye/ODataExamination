@@ -1,8 +1,8 @@
 ﻿using ODataLibrary.DTO;
 using ODataLibrary.Services;
 
-namespace ODataLibrary.Commands;
-public class FilterPeopleCommand : Commands
+namespace ODataLibrary.Commands.PeopleCommands;
+public class FilterPeopleCommand : PeopleCommand
 {
     private readonly string filter;
     public FilterPeopleCommand(PeopleService peopleService, string filter) : base(peopleService)

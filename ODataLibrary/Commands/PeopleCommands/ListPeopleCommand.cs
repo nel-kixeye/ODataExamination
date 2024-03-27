@@ -1,10 +1,10 @@
 ﻿using ODataLibrary.DTO;
 using ODataLibrary.Services;
 
-namespace ODataLibrary.Commands;
-public class ListPeopleCommand : Commands
+namespace ODataLibrary.Commands.PeopleCommands;
+public class ListPeopleCommand : PeopleCommand
 {
-    public ListPeopleCommand(PeopleService peopleService) : base(peopleService){}
+    public ListPeopleCommand(PeopleService peopleService) : base(peopleService) { }
 
     public override string CommandName => "ListPeople";
 
