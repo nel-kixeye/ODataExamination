@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34414.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataExamination", "ODataExamination\ODataExamination.csproj", "{237A029B-E2B2-40B0-9072-AF3D2DB65A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ODataExamination", "ODataExamination\ODataExamination.csproj", "{237A029B-E2B2-40B0-9072-AF3D2DB65A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataLibrary", "ODataLibrary\ODataLibrary.csproj", "{1DB120F9-AF32-40B0-905B-4851642A4707}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ODataLibrary", "ODataLibrary\ODataLibrary.csproj", "{1DB120F9-AF32-40B0-905B-4851642A4707}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary", "CommonLibrary\CommonLibrary.csproj", "{3B25B640-EB60-4955-858F-4FF0C4D47177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OData.UnitTest", "OData.UnitTest\OData.UnitTest.csproj", "{D196CB91-9F94-4902-8692-BB61766EE725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OData.UnitTest", "OData.UnitTest\OData.UnitTest.csproj", "{D196CB91-9F94-4902-8692-BB61766EE725}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OData.DataLibrary", "OData.DataLibrary\OData.DataLibrary.csproj", "{EF81E8C4-9B61-4AAA-B125-BD9F9FABF6D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{1DB120F9-AF32-40B0-905B-4851642A4707}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DB120F9-AF32-40B0-905B-4851642A4707}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DB120F9-AF32-40B0-905B-4851642A4707}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B25B640-EB60-4955-858F-4FF0C4D47177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B25B640-EB60-4955-858F-4FF0C4D47177}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B25B640-EB60-4955-858F-4FF0C4D47177}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B25B640-EB60-4955-858F-4FF0C4D47177}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D196CB91-9F94-4902-8692-BB61766EE725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D196CB91-9F94-4902-8692-BB61766EE725}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D196CB91-9F94-4902-8692-BB61766EE725}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D196CB91-9F94-4902-8692-BB61766EE725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF81E8C4-9B61-4AAA-B125-BD9F9FABF6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF81E8C4-9B61-4AAA-B125-BD9F9FABF6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF81E8C4-9B61-4AAA-B125-BD9F9FABF6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF81E8C4-9B61-4AAA-B125-BD9F9FABF6D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,11 +1,17 @@
-﻿using CommonLibrary.Models;
+﻿using OData.DataLibrary.Data;
+using Trippin;
 
 namespace ODataLibrary.Services;
-internal class PeopleService
+public class PeopleService
 {
-    internal List<Person> PeopleList() 
+    private readonly APIContext _peopleService;
+    public PeopleService(APIContext apiContext)
     {
-        return new List<Person>();
+        _peopleService = apiContext;
+    }
+    public async Task<IEnumerable<Person>> PeopleList() 
+    {
+        return await _peopleService.People();
     }
 
 }

@@ -1,8 +1,15 @@
-﻿namespace ODataLibrary.Commands;
-internal class ListPeopleCommand : Commands
+﻿using ODataLibrary.Services;
+using Trippin;
+
+namespace ODataLibrary.Commands;
+public class ListPeopleCommand : Commands
 {
-    public override string Execute()
+    public ListPeopleCommand(PeopleService peopleService) : base(peopleService){}
+
+    public override string CommandName => "ListPeople";
+
+    public override async Task<IEnumerable<Person>> Execute()
     {
-        throw new NotImplementedException();
+        return await _peopleService.PeopleList();
     }
 }
