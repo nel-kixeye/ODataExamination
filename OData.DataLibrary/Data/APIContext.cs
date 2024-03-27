@@ -14,4 +14,10 @@ public class APIContext
         IEnumerable<Person> people = await _context.People.ExecuteAsync();
         return people;
     }
+
+    public async Task<IEnumerable<Person>> FilteredPeople()
+    {
+        IEnumerable<Person> people = await _context.People.ExecuteAsync();
+        return people;
+    }
 }
