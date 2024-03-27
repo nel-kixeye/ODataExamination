@@ -14,7 +14,10 @@ commandManager.AddCommand(listPeopleCommand);
 //execute listing people command
 await commandManager.ExecuteCommandAsync("ListPeople");
 var people = commandManager.CurrentResult;
-foreach (var person in people) 
+if (people is { }) 
 {
-    Console.WriteLine(person.UserName);
+    foreach (var person in people)
+    {
+        Console.WriteLine(person.UserName);
+    }
 }
