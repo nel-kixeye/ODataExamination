@@ -1,5 +1,4 @@
-﻿using ODataLibrary.Commands.PeopleCommands;
-using ODataLibrary.Services;
+﻿using ODataLibrary.Services;
 using Trippin;
 
 namespace ODataLibrary.Commands.PersonCommand;

@@ -2,6 +2,7 @@
 using OData.DataLibrary.Data;
 using ODataLibrary.Commands.PeopleCommands;
 using ODataLibrary.Commands.PersonCommand;
+using Trippin;
 
 //set up dependencies
 var apiContext = new APIContext();
@@ -47,7 +48,7 @@ Console.WriteLine();
 Console.WriteLine("Show People");
 Console.WriteLine();
 
-//execute filtering people command
+//execute show people command
 var showPersonDetails = new ShowPersonDetails(peopleService, "russellwhyte");
 personCommandManager.AddCommand(showPersonDetails);
 await personCommandManager.ExecuteCommandAsync("ShowPersonDetails");
@@ -55,4 +56,23 @@ var person = personCommandManager.CurrentResult;
 if (person is { })
 {
     Console.WriteLine(person.LastName + ", " + person.FirstName);
+}
+
+Console.WriteLine();
+Console.WriteLine("Create People");
+Console.WriteLine();
+
+//execute show people command
+var createPerson = new CreatePerson(peopleService, new Person() 
+{
+    UserName = "Test",
+    FirstName = "Test",
+    LastName = "Test",
+});
+personCommandManager.AddCommand(createPerson);
+await personCommandManager.ExecuteCommandAsync("CreatePerson");
+var createdPerson = personCommandManager.CurrentResult;
+if (createdPerson is { })
+{
+    Console.WriteLine(createdPerson.LastName + ", " + createdPerson.FirstName);
 }

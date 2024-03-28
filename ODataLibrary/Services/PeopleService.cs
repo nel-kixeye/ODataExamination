@@ -28,6 +28,11 @@ public class PeopleService
         return personResult.FirstOrDefault();
     }
 
+    public async Task<Person?> CreatePerson(Person newPerson) 
+    {
+        return await _apiContext.NewPeople(newPerson);
+    }
+
     private IEnumerable<PersonNameDTO>? PreparePersonDTOResult(IEnumerable<Person> people) 
     {
         var processedPeople = people.Select(p => new { p.UserName, p.FirstName, p.LastName });
