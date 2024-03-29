@@ -23,6 +23,10 @@ public class APIContext
         return (await _context.People.ExecuteAsync()).Where(p => 
         p.UserName == filter 
         || p.FirstName == filter
-        || p.LastName == filter);
+        || p.LastName == filter
+        || p.Gender.ToString() == filter
+        || p.Age.ToString() == filter
+        || p.FavoriteFeature.ToString() == filter
+        || p.Emails.Contains(filter));
     }
 }
